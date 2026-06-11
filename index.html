@@ -16,6 +16,18 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@500;600;700&family=Noto+Sans+Gurmukhi:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <script>
+      (function () {
+        var base = document.createElement('base');
+        if (location.hostname.endsWith('github.io')) {
+          var repo = location.pathname.split('/').filter(Boolean)[0];
+          base.href = repo ? '/' + repo + '/' : '/';
+        } else {
+          base.href = '/';
+        }
+        document.head.appendChild(base);
+      })();
+    </script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
